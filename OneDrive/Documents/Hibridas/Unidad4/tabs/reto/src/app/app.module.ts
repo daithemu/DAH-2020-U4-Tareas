@@ -14,14 +14,19 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 
 import { AngularFirestore } from "@angular/fire/firestore";
+import { HttpClientModule} from "@angular/common/http";
+
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
+
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
-  ],
+  AngularFireModule.initializeApp(environment.firebaseConfig), AngularFireDatabaseModule,
+  FormsModule, ReactiveFormsModule, HttpClientModule],
+
   providers: [
     StatusBar,
     SplashScreen,
