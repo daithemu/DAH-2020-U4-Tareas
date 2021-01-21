@@ -28,7 +28,7 @@ export class Tab2Page {
 
   update(student:Estudiante, active:boolean){
     student.active =  active;
-    this.service.updateStudent(student, student.id);
+    this.service.updateStudent(student, student.name);
   }
 
   detail(student: Estudiante){
